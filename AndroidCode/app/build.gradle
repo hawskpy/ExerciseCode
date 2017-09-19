@@ -10,6 +10,15 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        ndk{
+            moduleName "MyLibrary"
+        }
+        sourceSets.main{
+            jni.srcDirs = []
+            jniLibs.srcDir "src/main/libs"
+        }
     }
     buildTypes {
         release {
@@ -25,5 +34,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
     testCompile 'junit:junit:4.12'
 }
