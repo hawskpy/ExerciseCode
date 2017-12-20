@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidCode</string>
+    <string name="title_activity_glide_load_image">GlideLoadImageActivity</string>
 </resources>

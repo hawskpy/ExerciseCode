@@ -1,21 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "hawk007.com.androidcode"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
 
-        ndk{
+        ndk {
             moduleName "MyLibrary"
         }
-        sourceSets.main{
+        sourceSets.main {
             jni.srcDirs = []
             jniLibs.srcDir "src/main/libs"
         }
@@ -26,6 +26,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
 }
 
 dependencies {
@@ -33,7 +44,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile('com.github.bumptech.glide:glide:4.4.0@aar') {
+        transitive = true;
+    }
+    compile('jp.wasabeef:glide-transformations:2.0.0', {
+        exclude group: 'com.github.bumptech.glide'
+    })
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+//    compile 'com.github.bumptech.glide:glide:4.4.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
     testCompile 'junit:junit:4.12'
 }
