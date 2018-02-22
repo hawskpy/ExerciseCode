@@ -30,11 +30,12 @@ public class Options {
     private boolean mDontTransform;
     private float mSizeMultiplier = 1f;
 
-    @IntDef({ScaleType.CENTER_CROP, ScaleType.FIT_CENTER})
+    @IntDef({ScaleType.CENTER_CROP, ScaleType.FIT_CENTER, ScaleType.CIRCLE_CROP})
     @Retention(RetentionPolicy.SOURCE)
     public @interface ScaleType {
         int CENTER_CROP = 0;
         int FIT_CENTER  = 1;
+        int CIRCLE_CROP = 2;
     }
 
     @IntDef({DiskCacheType.ALL, DiskCacheType.NONE, DiskCacheType.RESOURCE, DiskCacheType.DATA, DiskCacheType.AUTOMATIC})

@@ -12,6 +12,10 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import hawk007.com.androidcode.activity.GlideLoadImageActivity;
 
+/**
+ * @author hawk
+ *
+ */
 public class MainActivity extends Activity {
 
     @Bind(R.id.main_tv)

@@ -162,6 +162,10 @@ public class ImageLoader {
         if (Options.ScaleType.FIT_CENTER == options.getScaleType()) {
             tempOptions = tempOptions.fitCenter();
         }
+
+        if (Options.ScaleType.CIRCLE_CROP == options.getScaleType() ){
+            tempOptions = tempOptions.circleCrop();
+        }
         if (options.getPlaceholderResId() > 0) {
             tempOptions = tempOptions.placeholder(options.getPlaceholderResId());
         }
