@@ -8,9 +8,23 @@ import android.util.Log
 class kotlinTest {
     fun printSum() {
         val sum = 2 - 1
+        print(getStringLenth(sum))
         Log.d("kotlinTest.class", sum.toString())
     }
 
+    fun getStringLenth(obj: Any): Int? {
+        if (obj is String) {
+            return obj.length
+        }
+        return null
+    }
+
+    fun step(){
+        print("循环输出：")
+        for (i in 1..10) { //  输出“1234”
+            print(i)
+        }
+    }
 
 }
 

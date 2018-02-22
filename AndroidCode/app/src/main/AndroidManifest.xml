@@ -32,7 +32,8 @@
         <activity android:name=".activity.GlideLoadImageActivity" />
         <activity android:name=".rx.RxAndroidActivity" />
         <activity android:name=".rx.RxJavaActivity" />
-        <activity android:name=".rx.RxViewActivity"></activity>
+        <activity android:name=".rx.RxViewActivity" />
+        <activity android:name=".activity.KotlinTestActivity"></activity>
     </application>
 
 </manifest>
