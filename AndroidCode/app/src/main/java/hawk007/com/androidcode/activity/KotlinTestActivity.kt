@@ -12,7 +12,7 @@ class KotlinTestActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin_test)
 
-        val  kotlin = kotlinTest()
-        kotlin.printSum()
+        val kotlin = kotlinTest()
+        kotlin.printSum(2, 1)
     }
 }
