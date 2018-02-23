@@ -1,4 +1,5 @@
 @file:JvmName("kotlinTest")
+
 package hawk007.com.androidcode.kotlin
 
 import android.util.Log
@@ -7,14 +8,28 @@ import android.util.Log
  * Created by hawk on 2018/2/22.
  */
 class kotlinTest {
-     fun printSum(a: Int, b: Int) {
+    fun printSum(a: Int, b: Int) {
         val sum = a - b
         print(getStringLenth(sum))
         Log.d("kotlinTest.class", sum.toString())
 
-        val max = if (a>b) a else b
+        val max = if (a > b) a else b
 
         print(max)
+
+        // 从枚举获取值
+        var color: Color = Color.BLACK
+        println(Color.values())
+        println(Color.valueOf("RED"))
+        println(color.name)
+        println(color.ordinal)
+
+//        输出所有枚举值
+        printAllValues<Color>()
+    }
+
+    inline fun <reified T : Enum<T>> printAllValues() {
+        print(enumValues<T>().joinToString { it.name })
     }
 
     fun getStringLenth(obj: Any): Int? {
@@ -35,7 +50,7 @@ class kotlinTest {
         print(a)
     }
 
-    fun demo (){
+    fun demo() {
         val list = ArrayList<String>()
         list.add("hello world")
         print(list.lastIndex)
