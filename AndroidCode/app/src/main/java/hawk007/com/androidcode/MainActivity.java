@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import hawk007.com.androidcode.activity.GlideLoadImageActivity;
 import hawk007.com.androidcode.activity.KotlinTestActivity;
+import hawk007.com.androidcode.jni.MyNdk;
 
 /**
  * @author hawk
@@ -34,7 +35,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-//        mainTv.setText(new MyNdk().getString());
+        mainTv.setText(new MyNdk().getString());
     }
 
     @OnClick({R.id.glide_example_bt,R.id.kotlin_example_bt})

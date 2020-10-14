@@ -1,4 +1,4 @@
-@file:JvmName("kotlinTest")
+@file:JvmName("kotlinTestUtlis")
 
 package hawk007.com.androidcode.kotlin
 

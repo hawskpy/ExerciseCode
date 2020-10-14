@@ -33,7 +33,9 @@
         <activity android:name=".rx.RxAndroidActivity" />
         <activity android:name=".rx.RxJavaActivity" />
         <activity android:name=".rx.RxViewActivity" />
-        <activity android:name=".activity.KotlinTestActivity"></activity>
+        <activity android:name=".activity.KotlinTestActivity" />
+        <activity android:name=".activity.HandlerTestActivity" />
+        <activity android:name=".activity.HandlerActivity"></activity>
     </application>
 
 </manifest>
